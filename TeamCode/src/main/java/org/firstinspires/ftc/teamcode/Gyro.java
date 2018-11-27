@@ -24,7 +24,9 @@ public class Gyro {
 
     public Gyro() {}
 
-    public void init (HardwareMap hwMap) {
+    public void init (HardwareMap ahwMap) {
+
+        hwMap = ahwMap;
 
         AdafruitBNO055IMU.Parameters parameters = new AdafruitBNO055IMU.Parameters();
         parameters.angleUnit       = AdafruitBNO055IMU.AngleUnit.DEGREES;
@@ -51,7 +53,7 @@ public class Gyro {
      */
     double readGyro() {
         angles = gyro.getAngularOrientation().toAxesReference(AxesReference.EXTRINSIC).toAxesOrder(AxesOrder.ZYX);
-        return angles.secondAngle - headingBias;
+        return angles.thirdAngle - headingBias;
     }
 
     /**

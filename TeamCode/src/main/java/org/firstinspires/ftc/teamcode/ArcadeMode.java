@@ -53,13 +53,13 @@ public class ArcadeMode extends OpMode {
         double leftPower;
         double rightPower;
         double liftPower;
-        double pivotPower;
+        //double pivotPower;
 
         // Arcade(POV) Mode uses left stick to go forward, and right stick to turn.
         double drive = -gamepad1.left_stick_y;
         double turn  =  gamepad1.right_stick_x;
         double lift = gamepad2.left_stick_y;
-        double pivotControl = gamepad2.right_stick_y;
+        //double pivotControl = gamepad2.right_stick_y;
 
         //Activating Turbo mode with GamePad1 right bumper
         if (gamepad1.right_bumper) {
@@ -75,15 +75,15 @@ public class ArcadeMode extends OpMode {
         }
 
         //Activating Intake with GamePad2 right and left bumpers
-        if (gamepad2.left_bumper) {
-            scorpion.intakePivot.intake.setPower(-1.0);
-            scorpion.led.setColor(colors.Dark_Red);
-        }else if (gamepad2.right_bumper) {
-            scorpion.intakePivot.intake.setPower(1.0);
-            scorpion.led.setColor(colors.Purple_Strobe);
-        }else {
-            scorpion.intakePivot.intake.setPower(0);
-        }
+//        if (gamepad2.left_bumper) {
+//            scorpion.intakePivot.intake.setPower(-1.0);
+//            scorpion.led.setColor(colors.Dark_Red);
+//        }else if (gamepad2.right_bumper) {
+//            scorpion.intakePivot.intake.setPower(1.0);
+//            scorpion.led.setColor(colors.Purple_Strobe);
+//        }else {
+//            scorpion.intakePivot.intake.setPower(0);
+//        }
 
         // Smooth and DeadZone the joystick values for DriveTrain
         drive        = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(drive, 0.10)) / driveCoefficient;
@@ -94,14 +94,14 @@ public class ArcadeMode extends OpMode {
         // Smooth and DeadZone the LatchLift and Pivot inputs before using
         lift         = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(lift, 0.1));
         liftPower    = Range.clip(lift, -1.0, 1.0);
-        pivotControl = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(pivotControl, 0.1));
-        pivotPower   = Range.clip(pivotControl/3, -0.5, 0.5);
+        //pivotControl = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(pivotControl, 0.1));
+        //pivotPower   = Range.clip(pivotControl/3, -0.5, 0.5);
 
         // Send calculated power to wheels
         scorpion.driveTrain.setPower(leftPower, rightPower);
 
         // Send calculated power to Pivot and LatchLift
-        scorpion.intakePivot.pivot.setPower(pivotPower);
+//        scorpion.intakePivot.pivot.setPower(pivotPower);
         scorpion.latch.latchLift.setPower(liftPower);
 
         // Update the encoder data every 1/10 second

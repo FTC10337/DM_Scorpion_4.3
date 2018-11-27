@@ -36,6 +36,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.TouchSensor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
@@ -43,10 +44,13 @@ import org.firstinspires.ftc.teamcode.LED;
 import org.firstinspires.ftc.teamcode.LedColorLibrary;
 
 @TeleOp(name="LED_Test", group="Iterative Opmode")
-//@Disabled
+@Disabled
 public class LED_test extends LinearOpMode {
 
-    public Servo led1 = null;
+    private Servo led1 = null;
+    private Servo led2 = null;
+    private TouchSensor touchSensorBottom = null;
+    private TouchSensor touchSensorTop = null;
     LedColorLibrary colors = new LedColorLibrary();
     private ElapsedTime runtime = new ElapsedTime();
 
@@ -55,37 +59,83 @@ public class LED_test extends LinearOpMode {
 
         //Initialize the hardware variables.
         led1 = hardwareMap.get(Servo.class, "led1");
-        //Setting LED lights with power OFF when initializing
-        led1.setPosition(colors.Twinkles_Purple_and_Black);
+        led2 = hardwareMap.get(Servo.class, "led2");
 
+        touchSensorBottom = hardwareMap.get(TouchSensor.class, "touchSensor1");
+        touchSensorTop = hardwareMap.get(TouchSensor.class, "touchSensor2");
+
+        //Setting LED lights with power OFF when initializing
+        led1.setPosition(colors.Black);
+        led2.setPosition(colors.Black);
+
+        telemetry.addData("Scorpion Says", "Hello DarkMatter!");
+        telemetry.update();
 
         waitForStart();
         runtime.reset();
 
         while (opModeIsActive()) {
 
-            led1.setPosition(colors.Red);
-            sleep(5000);
-            led1.setPosition(colors.Confetti);
-            sleep(5000);
-            led1.setPosition(colors.Violet);
-            sleep(5000);
-            led1.setPosition(colors.Lime);
-            sleep(5000);
-            led1.setPosition(colors.Color_Waves_Party_Palette);
-            sleep(5000);
-            led1.setPosition(colors.Fire_Medium);
-            sleep(5000);
-            led1.setPosition(colors.Light_Chase_Blue);
-            sleep(5000);
-            led1.setPosition(colors.Strobe_Gold);
-            sleep(5000);
-            led1.setPosition(colors.Heartbeat_White);
-            sleep(5000);
+
+            if (touchSensorBottom.isPressed()) {
+                telemetry.addData("Bottom Sensor", "is ON");
+                telemetry.update();
+                led1.setPosition(colors.Red);
+                led2.setPosition(colors.Red);
+            } else {
+                telemetry.addData("Lift", "is moving");
+                telemetry.update();
+                led1.setPosition(colors.Confetti);
+                led2.setPosition(colors.Confetti);
+            }
+
+            if (touchSensorTop.isPressed()) {
+                telemetry.addData("Top Sensor", "is ON");
+                telemetry.update();
+                led1.setPosition(colors.Red);
+                led2.setPosition(colors.Red);
+            } else {
+                telemetry.addData("Lift", "is moving");
+                telemetry.update();
+                led1.setPosition(colors.Confetti);
+                led2.setPosition(colors.Confetti);
+            }
+
+
+//
+//            led1.setPosition(colors.Red);
+//            led2.setPosition(colors.Red);
+//            sleep(5000);
+//            led1.setPosition(colors.Confetti);
+//            led2.setPosition(colors.Confetti);
+//            sleep(5000);
+//            led1.setPosition(colors.Violet);
+//            led2.setPosition(colors.Violet);
+//            sleep(5000);
+//            led1.setPosition(colors.Lime);
+//            led2.setPosition(colors.Lime);
+//            sleep(5000);
+//            led1.setPosition(colors.Color_Waves_Party_Palette);
+//            led2.setPosition(colors.Color_Waves_Party_Palette);
+//            sleep(5000);
+//            led1.setPosition(colors.Fire_Medium);
+//            led2.setPosition(colors.Fire_Medium);
+//            sleep(5000);
+//            led1.setPosition(colors.Light_Chase_Blue);
+//            led2.setPosition(colors.Light_Chase_Blue);
+//            sleep(5000);
+//            led1.setPosition(colors.Strobe_Gold);
+//            led2.setPosition(colors.Strobe_Gold);
+//            sleep(5000);
+//            led1.setPosition(colors.Heartbeat_White);
+//            led2.setPosition(colors.Heartbeat_White);
+//            sleep(5000);
 
         }
 
     }
+
+
 
 
 

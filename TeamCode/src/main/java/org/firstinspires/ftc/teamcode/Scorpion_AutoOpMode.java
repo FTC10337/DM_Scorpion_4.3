@@ -11,6 +11,13 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.RobotLog;
+import android.graphics.Camera;
+import org.firstinspires.ftc.robotcore.external.ClassFactory;
+import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
+import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
+import java.util.List;
 
 import com.qualcomm.robotcore.util.Range;
 
@@ -18,6 +25,7 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
 
     /* Declare OpMode members. */
     ScorpionHW scorpion = new ScorpionHW();
+    LedColorLibrary colors = new LedColorLibrary();
 
     static final double     COUNTS_PER_MOTOR_REV    = 7 ;    // Neverest 20
     static final double     DRIVE_GEAR_REDUCTION    = 40 * 72 / 48  ;     // This is < 1.0 if geared UP
@@ -27,14 +35,12 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
     static final double     DRIVE_SPEED             = 0.6;
     static final double     TURN_SPEED              = 0.5;
 
-
     static final double     HEADING_THRESHOLD       = 1.0 ;    // As tight as we can make it with an integer gyro
     static final double     P_TURN_COEFF            = 0.011; // Larger is more responsive, but also less accurate
     static final double     P_TURN_COEFF_180        = 0.009; // For turns closer to 180 degrees. Less responsive, but more accurate to account for momentum coming out of long turns.
     static final double     P_TURN_COEFF_STRONG     = 0.150; // For small 1 degree adjustment turns
     static final double     P_DRIVE_COEFF_1         = 0.01;  // Larger is more responsive, but also less accurate
     static final double     P_DRIVE_COEFF_2         = 0.25;  // Intenionally large so robot "wiggles" around the target setpoint while driving
-
 
     @Override
     public void runOpMode() {

@@ -12,7 +12,7 @@ public class IntakePivot {
     public DcMotor pivot = null;
     private HardwareMap hwMap = null;
 
-    public IntakePivot() {}
+    //public IntakePivot() {}
 
     public void init (HardwareMap ahwMap) {
 

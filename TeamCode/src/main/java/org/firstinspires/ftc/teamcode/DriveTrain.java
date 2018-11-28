@@ -45,7 +45,7 @@ public class DriveTrain {
         //setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);       // Temporary until encoders fixed
 
         //Setting motors with zero power when initializing
-        setPower(0.0, 0.0);
+        setMotorPower(0.0, 0.0);
     }
 
     /**
@@ -65,7 +65,7 @@ public class DriveTrain {
      * @param left -- left side power
      * @param right -- right side power
      */
-    public void setPower (double left, double right) {
+    public void setMotorPower (double left, double right) {
         left = Range.clip(left, -1.0, 1.0);
         right = Range.clip(right, -1.0, 1.0);
         leftFront.setPower(left);

@@ -56,8 +56,12 @@ public class AutoMode extends Scorpion_AutoOpMode {
         scorpion.gyro.zeroGyro();    // Make sure gyro is zeroed at start
 
         scorpion.latch.latchLift.setPower(-1.0);   // Lowering Scorpion FullPower
-        sleep(5000);             // Go down for 5 seconds
-        scorpion.latch.latchLift.setPower(0.0);
+        //scorpion.led.setLedColor(colors.Purple_Strobe);
+        if (scorpion.latch.touchSensorTop.isPressed()) {
+            scorpion.latch.latchLift.setPower(0.0);
+            //scorpion.led.setLedColor(colors.Black);
+        }
+        //sleep(5000);             // Go down for 5 seconds
 
         if (opModeIsActive()) {
             /** Activate Tensor Flow Object Detection. */
@@ -71,8 +75,10 @@ public class AutoMode extends Scorpion_AutoOpMode {
                     // the last time that call was made.
                     List<Recognition> updatedRecognitions = tfod.getUpdatedRecognitions();
                     if (updatedRecognitions != null) {
+                        //scorpion.led.setLedColor(colors.Rainbow_Party_Palette);
                         telemetry.addData("# Object Detected", updatedRecognitions.size());
                         if (updatedRecognitions.size() == 3) {
+                            //scorpion.led.setLedColor(colors.Black);
                             int goldMineralX = -1;
                             int silverMineral1X = -1;
                             int silverMineral2X = -1;
@@ -88,10 +94,13 @@ public class AutoMode extends Scorpion_AutoOpMode {
                             if (goldMineralX != -1 && silverMineral1X != -1 && silverMineral2X != -1) {
                                 if (goldMineralX < silverMineral1X && goldMineralX < silverMineral2X) {
                                     telemetry.addData("Gold Mineral Position", "Left");
+                                    //scorpion.led.ledLeft.setPosition(colors.Gold);
                                 } else if (goldMineralX > silverMineral1X && goldMineralX > silverMineral2X) {
                                     telemetry.addData("Gold Mineral Position", "Right");
+                                    //scorpion.led.ledRight.setPosition(colors.Gold);
                                 } else {
                                     telemetry.addData("Gold Mineral Position", "Center");
+                                    //scorpion.led.setLedColor(colors.Gold);
                                     gyroTurn(TURN_SPEED, -5, P_TURN_COEFF); //Turn to insure off hook
                                     sleep(500);
 

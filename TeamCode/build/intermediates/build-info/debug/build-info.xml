@@ -6,22 +6,22 @@
     density="xhdpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1543289990738"
+    timestamp="1543372399863"
     token="-7325793411140649439"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="167" />
+        duration="126" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="20" />
+        duration="11" />
     <task
         name="verifier"
-        duration="16" />
+        duration="5" />
 
     <artifact
         location="/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1543289990738"
+        timestamp="1543372399863"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk"

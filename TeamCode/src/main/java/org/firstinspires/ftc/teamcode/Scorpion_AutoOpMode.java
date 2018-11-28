@@ -50,6 +50,8 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
         // Init the hardware
         scorpion.init(hardwareMap); // ScorpionHW
 
+        //scorpion.led.setLedColor(colors.Confetti);
+
         //setting motors to use Encoders and BRAKE mode
         scorpion.driveTrain.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         scorpion.driveTrain.setZeroMode(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -129,7 +131,7 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
             runtime.reset();
 
             // Max power to both sides is the same
-            scorpion.driveTrain.setPower(speed, speed);
+            scorpion.driveTrain.setMotorPower(speed, speed);
 
             // keep looping while we are still active, and there is time left, and both motors are running.
             // Note: We use (isBusy() && isBusy()) in the loop test, which means that when EITHER motor hits
@@ -155,7 +157,7 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
             }
 
             // Stop all motion;
-            scorpion.driveTrain.setPower(0, 0);
+            scorpion.driveTrain.setMotorPower(0, 0);
 
             // Turn off RUN_TO_POSITION
             scorpion.driveTrain.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -226,7 +228,7 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
         }
 
         // Send desired speeds to motors.
-        scorpion.driveTrain.setPower(leftSpeed, rightSpeed);
+        scorpion.driveTrain.setMotorPower(leftSpeed, rightSpeed);
 
         return onTarget;
     }
@@ -237,6 +239,7 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
      * @return  error angle: Degrees in the range +/- 180. Centered on the robot's frame of reference
      *          +ve error means the robot should turn LEFT (CCW) to reduce error.
      */
+
     public double getError(double targetAngle) {
 
         double robotError;

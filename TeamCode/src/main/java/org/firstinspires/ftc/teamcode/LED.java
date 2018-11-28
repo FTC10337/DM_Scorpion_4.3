@@ -10,8 +10,8 @@ import com.qualcomm.robotcore.hardware.ServoControllerEx;
 
 public class LED {
 
-    public Servo led1 = null;
-    public Servo led2 = null;
+    public Servo ledRight = null;
+    public Servo ledLeft = null;
     private HardwareMap hwMap = null;
 
     public LED() {}
@@ -21,18 +21,16 @@ public class LED {
         hwMap = ahwMap;
 
         // Initialize the hardware variables.
-        led1 = hwMap.get(Servo.class, "led1");
-        led2 = hwMap.get(Servo.class, "led2");
+        ledRight = hwMap.get(Servo.class, "led1");
+        ledLeft = hwMap.get(Servo.class, "led2");
 
         //Setting LED lights with power OFF when initializing
-        led1.setPosition(0.7745);
-        led2.setPosition(0.7745);
-
+        setLedColor(0.7745);
     }
 
-    public void setColor (double colors) {
-        led1.setPosition(colors);
-        led2.setPosition(colors);
+    public void setLedColor (double colors) {
+        ledRight.setPosition(colors);
+        ledLeft.setPosition(colors);
     }
 
 }

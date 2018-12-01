@@ -53,7 +53,7 @@ public class Gyro {
      */
     double readGyro() {
         angles = gyro.getAngularOrientation().toAxesReference(AxesReference.EXTRINSIC).toAxesOrder(AxesOrder.ZYX);
-        return angles.thirdAngle - headingBias;
+        return angles.firstAngle - headingBias;
     }
 
     /**

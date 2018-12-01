@@ -9,6 +9,7 @@ import android.graphics.Camera;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
@@ -31,7 +32,7 @@ import java.util.List;
  */
 
 @TeleOp(name = "Concept: TensorFlow Object Detection Webcam", group = "Concept")
-@Disabled
+//@Disabled
 
 public class TensorFlowObjectDetection extends LinearOpMode {
     private static final String TFOD_MODEL_ASSET = "RoverRuckus.tflite";
@@ -48,6 +49,8 @@ public class TensorFlowObjectDetection extends LinearOpMode {
 
     private Camera camera;
 
+    private ElapsedTime runtime = new ElapsedTime();
+
     /**
      * {@link #tfod} is the variable we will use to store our instance of the Tensor Flow Object
      * Detection engine.
@@ -58,6 +61,15 @@ public class TensorFlowObjectDetection extends LinearOpMode {
 
     @Override
     public void runOpMode() {
+
+        runtime.reset();
+
+        while (runtime.seconds() > 20 && runtime.seconds() < 30) {
+            //scorpion.led.setLedColor(colors.Green);
+
+            telemetry.addData("Time to Latch", "20sec");
+        }
+
         // The TFObjectDetector uses the camera frames from the VuforiaLocalizer, so we create that
         // first.
         initVuforia();
@@ -130,7 +142,7 @@ public class TensorFlowObjectDetection extends LinearOpMode {
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();
 
         parameters.vuforiaLicenseKey = VUFORIA_KEY;
-        parameters.cameraName = hardwareMap.get(WebcamName.class, "webcam");
+        parameters.cameraName = hardwareMap.get(WebcamName.class, "Webcam");
 
         //parameters.cameraDirection = CameraDirection.BACK;
 

@@ -229,6 +229,8 @@ abstract public class Scorpion_AutoOpMode extends LinearOpMode {
 
         // Send desired speeds to motors.
         scorpion.driveTrain.setMotorPower(leftSpeed, rightSpeed);
+        telemetry.addData("Error ", error);
+        telemetry.update();
 
         return onTarget;
     }

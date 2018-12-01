@@ -7,6 +7,8 @@ import android.graphics.Camera;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.util.Range;
 import com.qualcomm.robotcore.util.RobotLog;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
@@ -34,6 +36,9 @@ public class AutoMode extends Scorpion_AutoOpMode {
 
     private Camera camera;
 
+    double liftPower;
+
+
     /**
      * {@link #tfod} is the variable we will use to store our instance of the Tensor Flow Object
      * Detection engine.
@@ -54,13 +59,21 @@ public class AutoMode extends Scorpion_AutoOpMode {
         }
 
         scorpion.gyro.zeroGyro();    // Make sure gyro is zeroed at start
+        scorpion.latch.latchLift.setPower((1.0));
+        sleep(1000);
 
-        scorpion.latch.latchLift.setPower(-1.0);   // Lowering Scorpion FullPower
+        scorpion.latch.latchLift.setPower(-0.5);   // Lowering Scorpion FullPower
         //scorpion.led.setLedColor(colors.Purple_Strobe);
-        if (scorpion.latch.touchSensorTop.isPressed()) {
-            scorpion.latch.latchLift.setPower(0.0);
+        ElapsedTime timer = new ElapsedTime();
+        timer.reset();
+        while (!scorpion.latch.touchSensorTop.isPressed() && opModeIsActive() && timer.milliseconds()<3000) {
+            telemetry.addData("Top Sensor", "is OFF");
+            telemetry.update();
             //scorpion.led.setLedColor(colors.Black);
         }
+        telemetry.addData("Top Sensor", "is ON");
+        telemetry.update();
+        scorpion.latch.latchLift.setPower(0);
         //sleep(5000);             // Go down for 5 seconds
 
         if (opModeIsActive()) {
@@ -100,8 +113,10 @@ public class AutoMode extends Scorpion_AutoOpMode {
                                     //scorpion.led.ledRight.setPosition(colors.Gold);
                                 } else {
                                     telemetry.addData("Gold Mineral Position", "Center");
+                                    telemetry.update();
                                     //scorpion.led.setLedColor(colors.Gold);
                                     gyroTurn(TURN_SPEED, -5, P_TURN_COEFF); //Turn to insure off hook
+                                    telemetry.addData("Finished turn", "");
                                     sleep(500);
 
                                     encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
@@ -115,6 +130,14 @@ public class AutoMode extends Scorpion_AutoOpMode {
 //
 //                                    scorpion.intakePivot.intake.setPower(-1.0);     //Using the Intake to place the Team Mark
 //                                    sleep(3000);
+//                                    gyroTurn(TURN_SPEED, -180, P_TURN_COEFF);
+//
+//                                    encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
+//                                            -20,
+//                                            -20,
+//                                            2.0);
+//                                    sleep(100);
+
                                 }
                             }
                         }
@@ -145,7 +168,7 @@ public class AutoMode extends Scorpion_AutoOpMode {
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters();
 
         parameters.vuforiaLicenseKey = VUFORIA_KEY;
-        parameters.cameraName = hardwareMap.get(WebcamName.class, "webcam");
+        parameters.cameraName = hardwareMap.get(WebcamName.class, "Webcam");
 
         //parameters.cameraDirection = CameraDirection.BACK;
 

@@ -10,10 +10,8 @@ import com.qualcomm.robotcore.util.Range;
 public class DriveTrain {
 
     // Declare OpMode members.
-    public DcMotor leftFront = null;
-    public DcMotor leftRear = null;
-    public DcMotor rightFront = null;
-    public DcMotor rightRear = null;
+    public DcMotor lDrive = null;
+    public DcMotor rDrive = null;
     private HardwareMap hwMap = null;
 
     public DriveTrain() {}
@@ -28,20 +26,17 @@ public class DriveTrain {
         hwMap = ahwMap;
 
         // Initialize the hardware variables.
-        leftFront  = hwMap.get(DcMotor.class, "left-front");
-        leftRear = hwMap.get(DcMotor.class, "left-rear");
-        rightFront = hwMap.get(DcMotor.class, "right-front");
-        rightRear = hwMap.get(DcMotor.class, "right-rear");
+        lDrive = hwMap.get(DcMotor.class, "lDrive");
+        rDrive = hwMap.get(DcMotor.class, "rDrive");
 
         //Setting direction of motor's rotation
-        leftFront.setDirection(DcMotor.Direction.REVERSE);
-        leftRear.setDirection(DcMotor.Direction.REVERSE);
-        rightFront.setDirection(DcMotor.Direction.FORWARD);
-        rightRear.setDirection(DcMotor.Direction.FORWARD);
+        lDrive.setDirection(DcMotor.Direction.REVERSE);
+        rDrive.setDirection(DcMotor.Direction.FORWARD);
 
         //setting motors to use Encoders
         setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        setZeroMode(DcMotor.ZeroPowerBehavior.BRAKE);
         //setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);       // Temporary until encoders fixed
 
         //Setting motors with zero power when initializing
@@ -54,10 +49,8 @@ public class DriveTrain {
      * @param mode -- What mode to use
      */
     public void setMode(DcMotor.RunMode mode) {
-        leftFront.setMode(mode);
-        leftRear.setMode(mode);
-        rightFront.setMode(mode);
-        rightRear.setMode(mode);
+        lDrive.setMode(mode);
+        rDrive.setMode(mode);
     }
 
     /**
@@ -68,10 +61,8 @@ public class DriveTrain {
     public void setMotorPower (double left, double right) {
         left = Range.clip(left, -1.0, 1.0);
         right = Range.clip(right, -1.0, 1.0);
-        leftFront.setPower(left);
-        leftRear.setPower(left);
-        rightFront.setPower(right);
-        rightRear.setPower(right);
+        lDrive.setPower(left);
+        rDrive.setPower(right);
     }
 
     /**
@@ -80,10 +71,8 @@ public class DriveTrain {
      * @param mode -- what mode to set motors to
      */
     public void setZeroMode(DcMotor.ZeroPowerBehavior mode) {
-        leftFront.setZeroPowerBehavior(mode);
-        leftRear.setZeroPowerBehavior(mode);
-        rightFront.setZeroPowerBehavior(mode);
-        rightRear.setZeroPowerBehavior(mode);
+        lDrive.setZeroPowerBehavior(mode);
+        rDrive.setZeroPowerBehavior(mode);
     }
     /**
      * Add deadzone to a stick value

@@ -7,8 +7,8 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 @Autonomous(name="Scorpion: TestGyro", group="DarkMatter2019")
-//@Disabled
-public class TestGyro extends Scorpion_AutoOpMode {
+@Disabled
+public class TestGyro extends Scorpion_AutoMode {
 
     @Override
     public void autoRunPath() {

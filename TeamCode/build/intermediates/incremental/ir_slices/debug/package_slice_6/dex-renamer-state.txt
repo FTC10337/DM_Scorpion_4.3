@@ -1,4 +1,4 @@
-#Mon Nov 26 20:23:54 CST 2018
+#Thu Dec 20 20:07:52 CST 2018
 base.0=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/dexMerger/debug/6
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Nov 30 19:03:24 CST 2018
+#Thu Dec 20 20:10:02 CST 2018
 20.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 143.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 237.path=blocks/mr_i2c_compass_sensor.js
@@ -146,9 +146,9 @@
 405.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 8.baseType=DIRECTORY
 48.baseType=DIRECTORY
-58.path=blocks/navigation.js
+58.path=lib/armeabi-v7a/libobject_tracking.so
 76.baseType=DIRECTORY
-90.set=DEX
+90.set=ASSET
 341.set=ASSET
 267.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 118.baseType=DIRECTORY
@@ -425,7 +425,7 @@
 107.path=images/ftcColorSensor.png
 363.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 17.path=java/js/snippets/markdown.js
-59.set=NATIVE_RESOURCE
+59.set=DEX
 396.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 261.set=ASSET
 259.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -531,7 +531,7 @@
 208.path=blockly/msg/messages.js
 24.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 402.set=ASSET
-57.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/dexMerger/debug/19
+57.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 357.set=ASSET
 21.baseType=DIRECTORY
 203.set=ASSET
@@ -593,7 +593,7 @@
 253.baseType=DIRECTORY
 281.baseType=DIRECTORY
 400.path=toolbox/android_sound_pool.xml
-91.set=ASSET
+91.set=DEX
 342.set=ASSET
 262.path=java/js/flowtype.js
 295.path=blockly/LICENSE
@@ -637,7 +637,7 @@
 275.path=java/js/antlr4/Utils.js
 352.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 350.set=ASSET
-91.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+91.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/dexMerger/debug/17
 309.path=java/js/antlr4/tree/index.js
 215.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 273.set=ASSET
@@ -788,7 +788,7 @@
 259.baseType=DIRECTORY
 287.baseType=DIRECTORY
 26.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-59.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/mergeJniLibs/debug/0
+59.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/dexMerger/debug/19
 377.set=ASSET
 300.set=ASSET
 210.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -821,7 +821,7 @@
 24.path=images/ftcTouchSensor.png
 233.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 404.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-57.path=classes.dex
+57.path=blocks/navigation.js
 80.set=ASSET
 331.set=ASSET
 266.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -913,7 +913,7 @@
 181.path=RoverRuckus.dat
 352.path=java/templates/ConceptVuforiaNavRoverRuckus
 45.set=ASSET
-91.path=java/js/app.js
+91.path=classes.dex
 215.path=java/templates/BasicOpMode_Linear
 228.baseType=DIRECTORY
 256.baseType=DIRECTORY
@@ -1087,7 +1087,7 @@
 235.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 2.baseType=DIRECTORY
 106.baseType=DIRECTORY
-59.path=lib/armeabi-v7a/libobject_tracking.so
+59.path=classes.dex
 351.set=ASSET
 112.baseType=DIRECTORY
 268.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -1132,7 +1132,7 @@
 160.set=ASSET
 289.path=lib/armeabi-v7a/libtensorflowlite_jni.so
 72.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
-57.set=DEX
+57.set=ASSET
 308.set=ASSET
 199.baseType=DIRECTORY
 327.baseType=DIRECTORY
@@ -1326,7 +1326,7 @@
 274.path=java/templates/SensorMRCompass
 351.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 340.set=ASSET
-90.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/dexMerger/debug/17
+90.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 214.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 263.set=NATIVE_RESOURCE
 38.path=java/js/antlr4/Parser.js
@@ -1471,7 +1471,7 @@ count=406
 209.path=css/bootstrap-theme.min.css
 25.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 299.baseType=DIRECTORY
-58.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+58.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/transforms/mergeJniLibs/debug/0
 367.set=ASSET
 213.set=ASSET
 168.set=ASSET
@@ -1582,7 +1582,7 @@ count=406
 190.path=css/bootstrap-theme.min.css.map
 10.baseType=DIRECTORY
 224.path=blocks/system.js
-58.set=ASSET
+58.set=NATIVE_RESOURCE
 310.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 309.set=ASSET
 172.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -1599,7 +1599,7 @@ count=406
 391.set=ASSET
 351.path=js/npm.js
 35.set=DEX
-90.path=classes.dex
+90.path=java/js/app.js
 214.path=blocks/vuforia_relic_recovery.js
 209.set=ASSET
 30.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out

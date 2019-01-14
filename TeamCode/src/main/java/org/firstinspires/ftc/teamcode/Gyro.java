@@ -20,7 +20,7 @@ public class Gyro {
 
     // Variables used for reading Gyro
     private Orientation angles;
-    private double      headingBias = 0.0;            // Gyro heading adjustment
+    private double headingBias = 0.0; // Gyro heading adjustment
 
     public Gyro() {}
 
@@ -28,11 +28,11 @@ public class Gyro {
 
         hwMap = ahwMap;
 
-        AdafruitBNO055IMU.Parameters parameters = new AdafruitBNO055IMU.Parameters();
-        parameters.angleUnit       = AdafruitBNO055IMU.AngleUnit.DEGREES;
-        parameters.accelUnit           = AdafruitBNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
+        BNO055IMU.Parameters parameters = new AdafruitBNO055IMU.Parameters();
+        parameters.mode      = BNO055IMU.SensorMode.IMU;
+        parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
+        parameters.accelUnit = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;
         //parameters.calibrationDataFile = "AdafruitIMUCalibration.json"; // see the calibration sample opmode
-        parameters.mode = AdafruitBNO055IMU.SensorMode.IMU;
         parameters.loggingEnabled      = true;
         parameters.loggingTag          = "IMU";
         //parameters.accelerationIntegrationAlgorithm = new JustLoggingAccelerationIntegrator();
@@ -40,7 +40,7 @@ public class Gyro {
         // Retrieve and initialize the IMU. We expect the IMU to be attached to an I2C port
         // on a Core Device Interface Module, configured to be a sensor of type "AdaFruit IMU",
         // and named "adaGyro".
-        gyro = hwMap.get(BNO055IMU.class, "gyro");
+        gyro = hwMap.get(BNO055IMU.class, "imu");
         gyro.initialize(parameters);
 
     }
@@ -53,7 +53,7 @@ public class Gyro {
      */
     double readGyro() {
         angles = gyro.getAngularOrientation().toAxesReference(AxesReference.EXTRINSIC).toAxesOrder(AxesOrder.ZYX);
-        return angles.firstAngle - headingBias;
+        return angles.secondAngle - headingBias;
     }
 
     /**

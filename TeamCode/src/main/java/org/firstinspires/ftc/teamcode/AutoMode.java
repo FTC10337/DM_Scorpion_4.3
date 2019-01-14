@@ -4,13 +4,8 @@
 package org.firstinspires.ftc.teamcode;
 
 import android.graphics.Camera;
-
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
-import com.qualcomm.robotcore.util.ElapsedTime;
-import com.qualcomm.robotcore.util.Range;
-import com.qualcomm.robotcore.util.RobotLog;
-
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
@@ -19,13 +14,12 @@ import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
 import java.util.List;
 
 @Autonomous(name="Scorpion: AutoMode", group="DarkMatter2019")
-//@Disabled
-public class AutoMode extends Scorpion_AutoOpMode {
+///@Disabled
+public class AutoMode extends Scorpion_AutoMode {
 
     private static final String TFOD_MODEL_ASSET = "RoverRuckus.tflite";
     private static final String LABEL_GOLD_MINERAL = "Gold Mineral";
     private static final String LABEL_SILVER_MINERAL = "Silver Mineral";
-
     private static final String VUFORIA_KEY = "AS3fDIb/////AAABmVlwDHOlLk7XkLQ9Z7m+vgYewFkchY4MpL+PfbJolvC/DFMYH6OMxo3PAR8T1escnF3nDl14w55XNWXovd11AKFXfeS6T3oidtGUj0iXLdh/RPdm3tK2MucFj+oUX9WWSoeGYpli/rVZ+aOvKkaStAQnGr7BvvJyEnj1rAtqVEFqA3S5bAUVryEU8vKt5m7g3fGAiFrnWBPeelRpYDm2pmXBzWZHyiSeTIYQMaQsFTCrt0k9rBz2tx2b9IxDLjdN11xOxTwfyb1mhgL1gvyspt4+k184JSZbrt6x0O580SdVoKYwAoWsoHgUnsWGR4df67TOd8JJ3UlW4ebUWq/Y5j6LzsDXewjxojnycUu58kc6";
 
     /**
@@ -33,11 +27,6 @@ public class AutoMode extends Scorpion_AutoOpMode {
      * localization engine.
      */
     private VuforiaLocalizer vuforia;
-
-    private Camera camera;
-
-    double liftPower;
-
 
     /**
      * {@link #tfod} is the variable we will use to store our instance of the Tensor Flow Object
@@ -59,22 +48,88 @@ public class AutoMode extends Scorpion_AutoOpMode {
         }
 
         scorpion.gyro.zeroGyro();    // Make sure gyro is zeroed at start
-        scorpion.latch.latchLift.setPower((1.0));
-        sleep(1000);
 
-        scorpion.latch.latchLift.setPower(-0.5);   // Lowering Scorpion FullPower
+//        scorpion.intakePivot.setPivotPower(0.5);      //Pushing Pivot forward
+//        sleep(500);
+//        scorpion.intakePivot.setPivotPower(0.0);
+
+//        scorpion.latch.latchLift.setPower((1.0));
+//        sleep(1000);
+
+//        scorpion.latch.latchLift.setPower(-0.5);   // Lowering Scorpion FullPower
+
         //scorpion.led.setLedColor(colors.Purple_Strobe);
-        ElapsedTime timer = new ElapsedTime();
-        timer.reset();
-        while (!scorpion.latch.touchSensorTop.isPressed() && opModeIsActive() && timer.milliseconds()<3000) {
-            telemetry.addData("Top Sensor", "is OFF");
-            telemetry.update();
-            //scorpion.led.setLedColor(colors.Black);
-        }
-        telemetry.addData("Top Sensor", "is ON");
-        telemetry.update();
-        scorpion.latch.latchLift.setPower(0);
+//        ElapsedTime timer = new ElapsedTime();
+//        timer.reset();
+//        while (!scorpion.latch.touchSensorTop.isPressed() && opModeIsActive() && timer.milliseconds()<3000) {
+//            telemetry.addData("Top Sensor", "is OFF");
+//            telemetry.update();
+//            //scorpion.led.setLedColor(colors.Black);
+//        }
+//        telemetry.addData("Top Sensor", "is ON");
+//        telemetry.update();
+//        scorpion.latch.latchLift.setPower(0);
+//
+//        sleep(1000);
+
+
+        /** Testing drive with Gyro
+         * Negative angle is turning Right and Positive angle to the Left */
+        gyroDrive(DRIVE_SPEED, 24.0, 0.0);    // Drive FWD 24 inches
+        sleep(3000);
+        gyroTurn( TURN_SPEED, -5.0);         // Turn  CCW to -5 Degrees
+        sleep(3000);
+        gyroDrive(DRIVE_SPEED, -12.0, 0.0);    // Drive FWD 24 inches
+        sleep(3000);
+        gyroHold( TURN_SPEED, -5.0, 0.5);    // Hold -5 Deg heading for a 1/2 second
+        //gyroDrive(DRIVE_SPEED, 12.0, -5.0);  // Drive FWD 12 inches at 5 degrees
+        //gyroTurn( TURN_SPEED,  5.0);         // Turn  CW  to  5 Degrees
+        sleep(3000);
+        gyroDrive(DRIVE_SPEED, 12.0, 0.0);    // Drive FWD 24 inches
+        sleep(3000);
+        //gyroHold( TURN_SPEED,  5.0, 0.5);    // Hold  5 Deg heading for a 1/2 second
+        //gyroTurn( TURN_SPEED,   0.0);         // Turn  CW  to   0 Degrees
+        //gyroHold( TURN_SPEED,   0.0, 1.0);    // Hold  0 Deg heading for a 1 second
+        gyroDrive(DRIVE_SPEED,-24.0, 0.0);    // Drive REV 24 inches
+        sleep(3000);
+
+
+
+//        gyroTurn(TURN_SPEED, -15, P_TURN_COEFF); //Turn to insure off hook
+//        telemetry.addData("Turn Right", "15 Degrees");
+//        telemetry.update();
+//        sleep(500);
+//
+//        encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
+//                25,
+//                25,
+//                2.0);
+//        telemetry.addData("Moving Forward", "25 inches");
+//        telemetry.update();
+//        sleep(300);
+//
+//        gyroTurn(TURN_SPEED, 15, P_TURN_COEFF); //Turn to insure off hook
+//        telemetry.addData("Turn Left", "15 Degrees");
+//        telemetry.update();
+//        sleep(500);
+//
+//        encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
+//                -25,
+//                -25,
+//                2.0);
+//        telemetry.addData("Moving Back", "25 inches");
+//        telemetry.update();
+//        sleep(300);
+//        sleep(300);
+
+
         //sleep(5000);             // Go down for 5 seconds
+//        gyroTurn(TURN_SPEED, 5, P_TURN_COEFF); //Turn to insure off hook
+//        telemetry.addData("Finished turn", "");
+//        sleep(500);
+//        gyroTurn(TURN_SPEED, -5, P_TURN_COEFF); //Turn to insure off hook
+//        telemetry.addData("Finished turn", "");
+//        sleep(500);
 
         if (opModeIsActive()) {
             /** Activate Tensor Flow Object Detection. */
@@ -108,25 +163,43 @@ public class AutoMode extends Scorpion_AutoOpMode {
                                 if (goldMineralX < silverMineral1X && goldMineralX < silverMineral2X) {
                                     telemetry.addData("Gold Mineral Position", "Left");
                                     //scorpion.led.ledLeft.setPosition(colors.Gold);
+//                                    gyroTurn(TURN_SPEED, 10, P_TURN_COEFF); //Turn to insure off hook
+//                                    telemetry.addData("Finished turn", "");
+//                                    sleep(500);
+
+
                                 } else if (goldMineralX > silverMineral1X && goldMineralX > silverMineral2X) {
                                     telemetry.addData("Gold Mineral Position", "Right");
                                     //scorpion.led.ledRight.setPosition(colors.Gold);
+//                                    gyroTurn(TURN_SPEED, -5, P_TURN_COEFF); //Turn to insure off hook
+//                                    telemetry.addData("Finished turn", "");
+//                                    sleep(500);
+
+
+
+//                                    gyroTurn(TURN_SPEED, 135, P_TURN_COEFF); //Turn to insure off hook
+//                                    telemetry.addData("Finished turn", "");
+//                                    sleep(500);
+//
+//                                    encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
+//                                            40,
+//                                            40,
+//                                            3.0);
+//                                    sleep(300);
+
+
                                 } else {
                                     telemetry.addData("Gold Mineral Position", "Center");
                                     telemetry.update();
                                     //scorpion.led.setLedColor(colors.Gold);
-                                    gyroTurn(TURN_SPEED, -5, P_TURN_COEFF); //Turn to insure off hook
-                                    telemetry.addData("Finished turn", "");
-                                    sleep(500);
+//                                    gyroTurn(TURN_SPEED, 3, P_TURN_COEFF); //Turn to insure off hook
+//                                    telemetry.addData("Finished turn", "");
+//                                    sleep(500);
 
-                                    encoderDrive(DRIVE_SPEED,           //Driving forward to push the mineral
-                                            20,
-                                            20,
-                                            2.0);
-                                    sleep(300);
 
-//                                    scorpion.intakePivot.pivot.setPower(-0.5);      //Pushing Pivot forward
-//                                    sleep(200);
+
+//                                    scorpion.intakePivot.setPivotPower(0.5);      //Pushing Pivot forward
+//                                    sleep(1000);
 //
 //                                    scorpion.intakePivot.intake.setPower(-1.0);     //Using the Intake to place the Team Mark
 //                                    sleep(3000);

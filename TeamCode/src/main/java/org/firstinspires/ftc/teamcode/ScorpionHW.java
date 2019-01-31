@@ -10,8 +10,8 @@ public class ScorpionHW {
     public DriveTrain   driveTrain   = new DriveTrain();
     public IntakePivot  intakePivot  = new IntakePivot();
     public LiftStinger liftStinger = new LiftStinger();
-    public Gyro         gyro         = new Gyro();
-    //public LED          led          = new LED();
+    public LED          led          = new LED();
+    public LedColorLibrary colors = new LedColorLibrary();
 
     public void init (HardwareMap ahwMap) {
 
@@ -20,8 +20,7 @@ public class ScorpionHW {
         driveTrain.init(hwMap);
         intakePivot.init(hwMap);
         liftStinger.init(hwMap);
-        //gyro.init(hwMap);
-        //led.init(hwMap);
+        led.init(hwMap);
 
     }
 

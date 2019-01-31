@@ -30,15 +30,15 @@ public class LiftStinger {
 
         //Setting direction of motor's and servo's rotation
         lift.setDirection(DcMotor.Direction.REVERSE);
-        stinger.setDirection(Servo.Direction.FORWARD);
+        stinger.setDirection(Servo.Direction.REVERSE);
 
-        //Setting lift motor with zero power when initializing
+        //Setting Lift motor with zero power when initializing
         lift.setPower(0);
 
         //Setting servo to position 0 when initialized
-        stinger.setPosition(0.2);
+        stinger.setPosition(0.15);
 
-        //Setting Pivot motor with Zero Power Behavior
+        //Setting Lift motor with Zero Power Behavior
         lift.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
     }

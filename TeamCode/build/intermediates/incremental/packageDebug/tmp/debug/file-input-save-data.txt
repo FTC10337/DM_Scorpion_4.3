@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Dec 20 20:10:02 CST 2018
+#Fri Jan 25 23:26:41 CST 2019
 20.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 143.base=/Users/hayktshorokhyan/Documents/GitHub/DM_Scorpion_4.3/TeamCode/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 237.path=blocks/mr_i2c_compass_sensor.js

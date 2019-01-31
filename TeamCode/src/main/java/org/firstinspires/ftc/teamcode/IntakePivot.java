@@ -3,11 +3,10 @@
  */
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.hardware.CRServo;
+
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.util.Range;
 
 public class IntakePivot {
 
@@ -15,6 +14,8 @@ public class IntakePivot {
     public DcMotor pivot2 = null;
     public DcMotor intake = null;
     public DcMotor extend = null;
+    public Servo intakeDoor = null;
+
     private HardwareMap hwMap = null;
 
     public IntakePivot() {}
@@ -28,26 +29,32 @@ public class IntakePivot {
         pivot2 = hwMap.get(DcMotor.class, "pivot2");
         intake = hwMap.get(DcMotor.class, "intake");
         extend = hwMap.get(DcMotor.class, "extend");
+        intakeDoor = hwMap.get(Servo.class, "intakeDoor");
 
         //Setting direction of motor's rotation
         pivot1.setDirection(DcMotor.Direction.FORWARD);
         pivot2.setDirection(DcMotor.Direction.FORWARD);
-        intake.setDirection(DcMotor.Direction.FORWARD);
+        intake.setDirection(DcMotor.Direction.REVERSE);
         extend.setDirection(DcMotor.Direction.FORWARD);
+        intakeDoor.setDirection(Servo.Direction.FORWARD);
 
         //setting motors to use Encoders
         setPivotMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        setPivotMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        //setPivotMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         //Setting motors with zero power when initializing
         setPivotPower(0);
         intake.setPower(0);
         extend.setPower(0);
 
+        //Setting servo to position 0 when initialized
+        intakeDoor.setPosition(0);
+
         //Setting Pivot motor with Zero Power Behavior
         pivot1.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         pivot2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         extend.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        intake.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
     }
 

@@ -1,10 +1,5 @@
 package org.firstinspires.ftc.teamcode;
 
-
-import android.graphics.Color;
-
-import java.util.regex.Pattern;
-
 public class LedColorLibrary {
 
     public double Rainbow_Rainbow_Palette = 0.2275;

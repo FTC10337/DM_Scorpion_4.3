@@ -19,14 +19,14 @@ public class ArcadeMode extends OpMode {
     private ElapsedTime runtime = new ElapsedTime();
     boolean turbo = false;
     double turnCoefficient = 4;
-    double driveCoefficient = 3;
+    double driveCoefficient = 2;
 
     @Override
     public void init() {
 
         scorpion.init(hardwareMap);
         //scorpion.led.setLedColor(scorpion.colors.Confetti);
-        scorpion.led.setLedColor(scorpion.colors.Purple_Strobe);
+        //scorpion.led.setLedColor(scorpion.colors.Purple_Strobe);
         // Tell the driver that initialization is complete.
         telemetry.addData("Scorpion Says", "Hello DarkMatter!");
         telemetry.update();
@@ -71,16 +71,16 @@ public class ArcadeMode extends OpMode {
         double turn  =  gamepad1.right_stick_x;
 
         //Turbo mode with GamePad1 "a" button
-        if (gamepad1.left_bumper) {
+        if (gamepad1.left_bumper || gamepad1.right_bumper) {
             turbo = true;
             turnCoefficient = 2;
             driveCoefficient = 1;
             telemetry.addData("TURBO is", "ON");
-            scorpion.led.setLedColor(scorpion.colors.Dark_Red);
+            scorpion.led.setLedColor(scorpion.colors.Light_Chase_Red);
         }else {
             turbo = false;
             turnCoefficient = 4;
-            driveCoefficient = 3;
+            driveCoefficient = 2;
             telemetry.addData("TURBO is", "OFF");
             scorpion.led.setLedColor(scorpion.colors.Black);
         }
@@ -103,9 +103,11 @@ public class ArcadeMode extends OpMode {
         if (gamepad2.left_bumper) {
             scorpion.intakePivot.intake.setPower(-1);
             telemetry.addData("Intake", "out");
+            scorpion.led.setLedColor(scorpion.colors.Breath_Gray);
         }else if (gamepad2.right_bumper) {
             scorpion.intakePivot.intake.setPower(0.5);
             telemetry.addData("Intake", "in");
+            scorpion.led.setLedColor(scorpion.colors.Breath_Blue);
         }else {
             scorpion.intakePivot.intake.setPower(0);
         }

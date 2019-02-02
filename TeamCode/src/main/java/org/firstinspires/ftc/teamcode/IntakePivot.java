@@ -5,6 +5,7 @@ package org.firstinspires.ftc.teamcode;
 
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
@@ -34,7 +35,7 @@ public class IntakePivot {
         //Setting direction of motor's rotation
         pivot1.setDirection(DcMotor.Direction.FORWARD);
         pivot2.setDirection(DcMotor.Direction.FORWARD);
-        intake.setDirection(DcMotor.Direction.REVERSE);
+        intake.setDirection(DcMotor.Direction.FORWARD);
         extend.setDirection(DcMotor.Direction.FORWARD);
         intakeDoor.setDirection(Servo.Direction.FORWARD);
 

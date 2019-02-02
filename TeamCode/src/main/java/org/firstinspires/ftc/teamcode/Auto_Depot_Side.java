@@ -124,10 +124,12 @@ public class Auto_Depot_Side extends LinearOpMode {
         scorpion.led.setLedColor(scorpion.colors.Purple_Heartbeat_Slow);
 
         //lowering the robot
+        scorpion.led.setLedColor(scorpion.colors.Strobe_Red);
         scorpion.liftStinger.lift.setPower(-1);
-        sleep(4800);
+        sleep(4200);
         scorpion.liftStinger.lift.setPower(0);
         sleep(500);
+        scorpion.led.setLedColor(scorpion.colors.Black);
         scorpion.liftStinger.stinger.setPosition(0.5);
         sleep(500);
 
@@ -143,7 +145,6 @@ public class Auto_Depot_Side extends LinearOpMode {
                     if (updatedRecognitions != null) {
                         telemetry.addData("# Object Detected", updatedRecognitions.size());
                         if (updatedRecognitions.size() == 3) {
-                            scorpion.led.setLedColor(scorpion.colors.Black);
                             int goldMineralX = -1;
                             int silverMineral1X = -1;
                             int silverMineral2X = -1;
@@ -168,24 +169,39 @@ public class Auto_Depot_Side extends LinearOpMode {
                                     telemetry.addData("Gold Mineral Position", "Left");
                                     telemetry.update();
 
-                                    scorpion.led.ledLeft.setPosition(scorpion.colors.Gold);
+                                    scorpion.led.ledLeft.setPosition(scorpion.colors.Strobe_Gold);
 
                                     encoderDrive(DRIVE_SPEED, 5); //Forward
                                     turn(TURN_SPEED, 20);  //Turn Left
-                                    encoderDrive(DRIVE_SPEED, 30); //Forward
+                                    encoderDrive(DRIVE_SPEED, 42); //Forward
 
-                                    scorpion.liftStinger.lift.setPower(1);
-                                    sleep(4800);
-                                    scorpion.liftStinger.lift.setPower(0);
-                                    sleep(1000);
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
 
                                     if (tfod != null) {
                                         tfod.shutdown();
                                     }
 
-                                    encoderDrive(DRIVE_SPEED, -30); //Reverse
-                                    turn(TURN_SPEED, -20);  //Turn Right
-                                    encoderDrive(DRIVE_SPEED, -5); //Reverse
+                                    turn(TURN_SPEED, -64);  //Turn Right
+                                    encoderDrive(DRIVE_SPEED, 20); //Forward
+
+                                    scorpion.intakePivot.intake.setPower(-0.75); //Intake Out the TeamMark
+                                    sleep(1500);
+                                    scorpion.intakePivot.intake.setPower(0);
+                                    sleep(500);
+
+                                    scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
+
+                                    encoderDrive(1, -75); //Reverse
+
+                                    scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
+
+                                    scorpion.liftStinger.lift.setPower(1); //Lower the Lift
+                                    sleep(4500);
+                                    scorpion.liftStinger.lift.setPower(0);
+                                    sleep(1000);
+
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
+
 
 
                                 } else if (goldMineralX > silverMineral1X && goldMineralX > silverMineral2X) {
@@ -193,43 +209,79 @@ public class Auto_Depot_Side extends LinearOpMode {
                                     telemetry.addData("Gold Mineral Position", "Right");
                                     telemetry.update();
 
-                                    scorpion.led.ledRight.setPosition(scorpion.colors.Gold);
+                                    scorpion.led.ledRight.setPosition(scorpion.colors.Strobe_Gold);
 
-                                    encoderDrive(DRIVE_SPEED, 5);
+                                    encoderDrive(DRIVE_SPEED, 5); //Forward
                                     turn(TURN_SPEED, -20);  //Turn Right
-                                    encoderDrive(DRIVE_SPEED, 30);
+                                    encoderDrive(DRIVE_SPEED, 30); //Forward
 
-                                    scorpion.liftStinger.lift.setPower(1);
-                                    sleep(4800);
-                                    scorpion.liftStinger.lift.setPower(0);
-                                    sleep(1000);
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
 
                                     if (tfod != null) {
                                         tfod.shutdown();
                                     }
 
-                                    encoderDrive(DRIVE_SPEED, -30);
-                                    turn(TURN_SPEED, 20);  //Turn Left
-                                    encoderDrive(DRIVE_SPEED, -5);
+                                    turn(TURN_SPEED, 43);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 34); //Forward
+
+                                    scorpion.intakePivot.intake.setPower(-0.5); //Intake Out the TeamMark
+                                    sleep(1000);
+                                    scorpion.intakePivot.intake.setPower(0);
+                                    sleep(500);
+
+                                    turn(TURN_SPEED, -64);  //Turn Right
+
+                                    scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
+
+                                    encoderDrive(1, -77); //Reverse
+
+                                    scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
+
+                                    scorpion.liftStinger.lift.setPower(1); //Lower the Lift
+                                    sleep(4500);
+                                    scorpion.liftStinger.lift.setPower(0);
+                                    sleep(1000);
+
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
 
 
                                 } else {
                                     telemetry.addData("Gold Mineral Position", "Center");
                                     telemetry.update();
 
-                                    scorpion.led.setLedColor(scorpion.colors.Gold);
+                                    scorpion.led.setLedColor(scorpion.colors.Strobe_Gold);
 
-                                    encoderDrive(DRIVE_SPEED, 30);
+                                    encoderDrive(DRIVE_SPEED, 57); //Forward
 
-                                    scorpion.liftStinger.lift.setPower(1);
-                                    sleep(4800);
-                                    scorpion.liftStinger.lift.setPower(0);
-                                    sleep(1000);
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
+                                    [.length - 1]
 
                                     if (tfod != null) {
                                         tfod.shutdown();
                                     }
-                                    encoderDrive(-DRIVE_SPEED, -30);
+
+                                    scorpion.intakePivot.intake.setPower(-0.5); //Intake Out the TeamMark
+                                    sleep(1000);
+                                    scorpion.intakePivot.intake.setPower(0);
+                                    sleep(500);
+
+                                    turn(TURN_SPEED, -50);  //Turn Right
+                                    encoderDrive(1, -18); //Reverse
+
+                                    turn(TURN_SPEED, 10);  //Turn Left
+
+                                    scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
+
+                                    encoderDrive(1, -70); //Reverse
+
+                                    scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
+
+                                    scorpion.liftStinger.lift.setPower(1); //Lower the Lift
+                                    sleep(4500);
+                                    scorpion.liftStinger.lift.setPower(0);
+                                    sleep(1000);
+
+                                    scorpion.led.setLedColor(scorpion.colors.Black);
 
                                 }
                             }

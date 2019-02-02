@@ -254,7 +254,6 @@ public class Auto_Depot_Side extends LinearOpMode {
                                     encoderDrive(DRIVE_SPEED, 57); //Forward
 
                                     scorpion.led.setLedColor(scorpion.colors.Black);
-                                    [.length - 1]
 
                                     if (tfod != null) {
                                         tfod.shutdown();

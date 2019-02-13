@@ -40,7 +40,7 @@ public class IntakePivot {
         intakeDoor.setDirection(Servo.Direction.FORWARD);
 
         //setting motors to use Encoders
-        setPivotMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        //setPivotMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         //setPivotMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         //Setting motors with zero power when initializing

@@ -134,7 +134,7 @@ public class ArcadeMode extends OpMode {
         pivotPower   = Range.clip(pivotControl , -1, 1);
 
         pivotExtend         = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(pivotExtend, 0.1));
-        pivotExtendPower    = Range.clip(pivotExtend , -0.5, 0.5);
+        pivotExtendPower    = Range.clip(pivotExtend , -1.0, 0.75);
 
         // Touch sensor to limit and stop the Lift
         if (scorpion.liftStinger.touchSensorTop.isPressed()) {

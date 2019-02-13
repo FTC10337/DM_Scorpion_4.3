@@ -25,9 +25,9 @@ import org.firstinspires.ftc.teamcode.ScorpionHW;
 
 import java.util.List;
 
-@Autonomous(name="Auto_Depot_Side", group="DarkMatter2019")
+@Autonomous(name="Auto_Crater_Side", group="DarkMatter2019")
 //@Disabled
-public class Auto_Depot_Side extends LinearOpMode {
+public class Auto_Crater_Side extends LinearOpMode {
 
     ScorpionHW scorpion = new ScorpionHW();
 
@@ -170,25 +170,28 @@ public class Auto_Depot_Side extends LinearOpMode {
                                     telemetry.update();
 
                                     scorpion.led.ledLeft.setPosition(scorpion.colors.Strobe_Gold);
+
                                     encoderDrive(DRIVE_SPEED, 5); //Forward
                                     turn(TURN_SPEED, 20);  //Turn Left
-                                    encoderDrive(DRIVE_SPEED, 43); //Forward
+                                    encoderDrive(DRIVE_SPEED, 20); //Forward
+
                                     scorpion.led.setLedColor(scorpion.colors.Black);
 
                                     if (tfod != null) {
                                         tfod.shutdown();
                                     }
 
-                                    turn(TURN_SPEED, -66);  //Turn Right
-                                    encoderDrive(DRIVE_SPEED, 20); //Forward
+                                    turn(TURN_SPEED, 23);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 25); //Forward
+                                    turn(TURN_SPEED, 45);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 60); //Forward
                                     scorpion.intakePivot.intake.setPower(-0.5); //Intake Out the TeamMark
                                     sleep(1000);
                                     scorpion.intakePivot.intake.setPower(0);
                                     sleep(50);
 
                                     scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
-
-                                    encoderDrive(DRIVE_SPEED, -75); //Reverse
+                                    encoderDrive(1, -75); //Reverse
 
                                     scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
                                     scorpion.liftStinger.lift.setPower(1); //Lower the Lift
@@ -208,7 +211,7 @@ public class Auto_Depot_Side extends LinearOpMode {
 
                                     encoderDrive(DRIVE_SPEED, 5); //Forward
                                     turn(TURN_SPEED, -20);  //Turn Right
-                                    encoderDrive(DRIVE_SPEED, 30); //Forward
+                                    encoderDrive(DRIVE_SPEED, 25); //Forward
 
                                     scorpion.led.setLedColor(scorpion.colors.Black);
 
@@ -216,16 +219,18 @@ public class Auto_Depot_Side extends LinearOpMode {
                                         tfod.shutdown();
                                     }
 
-                                    turn(TURN_SPEED, 43);  //Turn Left
-                                    encoderDrive(DRIVE_SPEED, 34); //Forward
+                                    encoderDrive(DRIVE_SPEED, -22); //Reverse
+                                    turn(TURN_SPEED, 81);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 46); //Forward
+                                    turn(TURN_SPEED, 49);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 58); //Forward
                                     scorpion.intakePivot.intake.setPower(-0.5); //Intake Out the TeamMark
                                     sleep(1000);
                                     scorpion.intakePivot.intake.setPower(0);
                                     sleep(50);
 
-                                    turn(TURN_SPEED, -63);  //Turn Right
                                     scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
-                                    encoderDrive(DRIVE_SPEED, -83); //Reverse
+                                    encoderDrive(DRIVE_SPEED, -74); //Reverse
 
                                     scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
                                     scorpion.liftStinger.lift.setPower(1); //Lower the Lift
@@ -241,25 +246,25 @@ public class Auto_Depot_Side extends LinearOpMode {
 
                                     scorpion.led.setLedColor(scorpion.colors.Strobe_Gold);
 
-                                    encoderDrive(DRIVE_SPEED, 58); //Forward
-
+                                    encoderDrive(DRIVE_SPEED, 23); //Forward
                                     scorpion.led.setLedColor(scorpion.colors.Black);
+                                    encoderDrive(DRIVE_SPEED, -18); //Reverse
+                                    turn(TURN_SPEED, 39);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 40); //Forward
 
                                     if (tfod != null) {
                                         tfod.shutdown();
                                     }
 
+                                    turn(TURN_SPEED, 57);  //Turn Left
+                                    encoderDrive(DRIVE_SPEED, 60); //Forward
                                     scorpion.intakePivot.intake.setPower(-0.5); //Intake Out the TeamMark
                                     sleep(1000);
                                     scorpion.intakePivot.intake.setPower(0);
                                     sleep(50);
 
-                                    turn(TURN_SPEED, -51);  //Turn Right
-                                    encoderDrive(DRIVE_SPEED, -21); //Reverse
-                                    turn(TURN_SPEED, 10);  //Turn Left
-
                                     scorpion.led.setLedColor(scorpion.colors.Twinkles_Lava_Palette);
-                                    encoderDrive(1, -70); //Reverse
+                                    encoderDrive(DRIVE_SPEED, -75); //Reverse
 
                                     scorpion.liftStinger.stinger.setPosition(0.15); // stinger back
                                     scorpion.liftStinger.lift.setPower(1); //Lower the Lift
@@ -334,9 +339,9 @@ public class Auto_Depot_Side extends LinearOpMode {
 
             // keep looping while we are still active, and BOTH motors are running.
             while (opModeIsActive() &&
-                   //(runtime.seconds() < timeoutS) &&
-                   (scorpion.driveTrain.lDrive.isBusy()
-                           && scorpion.driveTrain.rDrive.isBusy())) {
+                    //(runtime.seconds() < timeoutS) &&
+                    (scorpion.driveTrain.lDrive.isBusy()
+                            && scorpion.driveTrain.rDrive.isBusy())) {
 
                 // Display it for the driver.
                 telemetry.addData("Target",  "%7d:%7d",

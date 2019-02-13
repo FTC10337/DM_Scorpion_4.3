@@ -2,7 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="090e71d9-0272-460e-92f6-f8eb79de906b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Crater_Side.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/TeamCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/TeamCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/build-info/debug/build-info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/build-info/debug/build-info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/ArcadeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/ArcadeMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/IntakePivot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental-verifier/debug/org/firstinspires/ftc/teamcode/IntakePivot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental/ir_slices/debug/package_slice_3/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/incremental/ir_slices/debug/package_slice_6/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/ArcadeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/ArcadeMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/IntakePivot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/org/firstinspires/ftc/teamcode/IntakePivot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/split-apk/debug/slices/slice_3.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/split-apk/debug/slices/slice_6.apk" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/split-apk/debug/slices/slice_6.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/ArcadeMode.dex" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/ArcadeMode.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/Auto_Depot_Side.dex" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/Auto_Depot_Side.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/IntakePivot.dex" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/133/org/firstinspires/ftc/teamcode/IntakePivot.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexMerger/debug/3/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexMerger/debug/3/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexMerger/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/dexMerger/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/ArcadeMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/ArcadeMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/Auto_Depot_Side.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/IntakePivot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/0/org/firstinspires/ftc/teamcode/IntakePivot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/build/intermediates/transforms/instantRun/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Depot_Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Depot_Side.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java" beforeDir="false" afterPath="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,31 +66,32 @@
     <session id="1140092071">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="10" />
+          <entry key="java" value="21" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="21" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="266" />
+          <entry key="java" value="473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="266" />
+          <entry key="JAVA" value="473" />
         </counts>
       </usages-collector>
     </session>
@@ -53,47 +99,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="109" column="64" selection-start-line="109" selection-start-column="64" selection-end-line="109" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LedColorLibrary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Depot_Side.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="255" column="84" selection-start-line="255" selection-start-column="84" selection-end-line="255" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/LED_test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/DriveTrain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="509">
+              <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="197" selection-end-column="84" />
               <folding>
-                <element signature="e#0#3827#0" expanded="true" />
+                <element signature="docComment;method#encoderDrive#0;class#Auto_Depot_Side#0" />
+                <element signature="method#encoderDrive#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#resetAngle#0;class#Auto_Depot_Side#0" />
+                <element signature="method#resetAngle#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#getAngle#0;class#Auto_Depot_Side#0" />
+                <element signature="method#getAngle#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#checkDirection#0;class#Auto_Depot_Side#0" />
+                <element signature="method#checkDirection#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#turn#0;class#Auto_Depot_Side#0" />
+                <element signature="method#turn#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#initVuforia#0;class#Auto_Depot_Side#0" />
+                <element signature="method#initVuforia#0;class#Auto_Depot_Side#0" />
+                <element signature="docComment;method#initTfod#0;class#Auto_Depot_Side#0" />
+                <element signature="method#initTfod#0;class#Auto_Depot_Side#0" />
               </folding>
             </state>
           </provider>
@@ -102,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+            <state relative-caret-position="555">
+              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -118,10 +142,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ScorpionHW.java">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LedColorLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="570">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -136,15 +160,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/TensorFlowObjectDetection.java">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ScorpionHW.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+            <state relative-caret-position="330">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1282">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/DriveTrain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#3827#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/RobotCore-release-sources.jar!/com/qualcomm/robotcore/hardware/HardwareMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="169" column="59" lean-forward="true" selection-start-line="169" selection-start-column="59" selection-end-line="169" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Crater_Side.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3795">
+              <caret line="273" column="84" selection-start-line="273" selection-start-column="84" selection-end-line="273" selection-end-column="84" />
+              <folding>
+                <element signature="docComment;method#encoderDrive#0;class#Auto_Crater_Side#0" />
+                <element signature="method#encoderDrive#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#resetAngle#0;class#Auto_Crater_Side#0" />
+                <element signature="method#resetAngle#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#getAngle#0;class#Auto_Crater_Side#0" />
+                <element signature="method#getAngle#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#checkDirection#0;class#Auto_Crater_Side#0" />
+                <element signature="method#checkDirection#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#turn#0;class#Auto_Crater_Side#0" />
+                <element signature="method#turn#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#initVuforia#0;class#Auto_Crater_Side#0" />
+                <element signature="method#initVuforia#0;class#Auto_Crater_Side#0" />
+                <element signature="docComment;method#initTfod#0;class#Auto_Crater_Side#0" />
+                <element signature="method#initTfod#0;class#Auto_Crater_Side#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -152,12 +239,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/TensorFlowObjectDetection.java" />
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ScorpionHW.java" />
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/LED_test.java" />
+        <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/TensorFlowObjectDetection.java" />
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java" />
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java" />
         <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Depot_Side.java" />
+        <option value="$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Crater_Side.java" />
       </list>
     </option>
   </component>
@@ -170,8 +258,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -194,7 +283,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,7 +395,7 @@
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.2589041" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.25811687" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.32956383" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -338,12 +426,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/DriveTrain.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/TensorFlowObjectDetection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#3827#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-845">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/RobotCore-release-sources.jar!/com/qualcomm/robotcore/hardware/HardwareMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="169" column="59" lean-forward="true" selection-start-line="169" selection-start-column="59" selection-end-line="169" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -354,24 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ScorpionHW.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LedColorLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/testing/TensorFlowObjectDetection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/IntakePivot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        <state relative-caret-position="570">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -382,24 +468,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/LedColorLibrary.java">
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/DriveTrain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="240">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#3827#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ScorpionHW.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ArcadeMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="109" column="64" selection-start-line="109" selection-start-column="64" selection-end-line="109" selection-end-column="64" />
+        <state relative-caret-position="-1282">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Depot_Side.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="255" column="84" selection-start-line="255" selection-start-column="84" selection-end-line="255" selection-end-column="84" />
+        <state relative-caret-position="509">
+          <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="197" selection-end-column="84" />
+          <folding>
+            <element signature="docComment;method#encoderDrive#0;class#Auto_Depot_Side#0" />
+            <element signature="method#encoderDrive#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#resetAngle#0;class#Auto_Depot_Side#0" />
+            <element signature="method#resetAngle#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#getAngle#0;class#Auto_Depot_Side#0" />
+            <element signature="method#getAngle#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#checkDirection#0;class#Auto_Depot_Side#0" />
+            <element signature="method#checkDirection#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#turn#0;class#Auto_Depot_Side#0" />
+            <element signature="method#turn#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#initVuforia#0;class#Auto_Depot_Side#0" />
+            <element signature="method#initVuforia#0;class#Auto_Depot_Side#0" />
+            <element signature="docComment;method#initTfod#0;class#Auto_Depot_Side#0" />
+            <element signature="method#initTfod#0;class#Auto_Depot_Side#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Auto_Crater_Side.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3795">
+          <caret line="273" column="84" selection-start-line="273" selection-start-column="84" selection-end-line="273" selection-end-column="84" />
+          <folding>
+            <element signature="docComment;method#encoderDrive#0;class#Auto_Crater_Side#0" />
+            <element signature="method#encoderDrive#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#resetAngle#0;class#Auto_Crater_Side#0" />
+            <element signature="method#resetAngle#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#getAngle#0;class#Auto_Crater_Side#0" />
+            <element signature="method#getAngle#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#checkDirection#0;class#Auto_Crater_Side#0" />
+            <element signature="method#checkDirection#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#turn#0;class#Auto_Crater_Side#0" />
+            <element signature="method#turn#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#initVuforia#0;class#Auto_Crater_Side#0" />
+            <element signature="method#initVuforia#0;class#Auto_Crater_Side#0" />
+            <element signature="docComment;method#initTfod#0;class#Auto_Crater_Side#0" />
+            <element signature="method#initTfod#0;class#Auto_Crater_Side#0" />
+          </folding>
         </state>
       </provider>
     </entry>

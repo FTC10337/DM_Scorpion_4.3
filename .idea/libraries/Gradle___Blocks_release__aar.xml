@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: :Blocks-release:@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/e5f9e341962a1f447f9a1a34d96b4208/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Blocks-release.aar/e5f9e341962a1f447f9a1a34d96b4208/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../DM_Scorpion_4.1alpha/gradle/caches/transforms-1/files-1.1/Blocks-release.aar/e5f9e341962a1f447f9a1a34d96b4208/res" />
+      <root url="jar://$PROJECT_DIR$/../DM_Scorpion_4.1alpha/gradle/caches/transforms-1/files-1.1/Blocks-release.aar/e5f9e341962a1f447f9a1a34d96b4208/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

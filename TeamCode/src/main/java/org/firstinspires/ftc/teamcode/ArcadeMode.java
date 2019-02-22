@@ -62,7 +62,8 @@ public class ArcadeMode extends OpMode {
         double rightPower;
         double liftPower;
         double pivotPower;
-        double pivotExtendPower;
+        double pivotExtendPower1;
+        double pivotExtendPower2;
 
 
         // ----- GAMEPAD 1 -----
@@ -134,7 +135,8 @@ public class ArcadeMode extends OpMode {
         pivotPower   = Range.clip(pivotControl , -1, 1);
 
         pivotExtend         = scorpion.driveTrain.smoothPowerCurve(scorpion.driveTrain.deadzone(pivotExtend, 0.1));
-        pivotExtendPower    = Range.clip(pivotExtend , -1.0, 0.75);
+        pivotExtendPower1    = Range.clip(pivotExtend , -1.0, 0.5);
+        pivotExtendPower2    = Range.clip(pivotExtend , -1.0, 0.5);
 
         // Touch sensor to limit and stop the Lift
         if (scorpion.liftStinger.touchSensorTop.isPressed()) {
@@ -152,7 +154,7 @@ public class ArcadeMode extends OpMode {
         scorpion.driveTrain.setMotorPower(leftPower, rightPower);
         scorpion.liftStinger.lift.setPower(liftPower);
         scorpion.intakePivot.setPivotPower(pivotPower);
-        scorpion.intakePivot.extend.setPower(pivotExtendPower);
+        scorpion.intakePivot.setExtendPower(pivotExtendPower1, pivotExtendPower2);
 
         // Update the encoder data every 1/10 second
         if (runtime.milliseconds() > 10) {
@@ -160,15 +162,6 @@ public class ArcadeMode extends OpMode {
                 telemetry.addData("DriveTrain",  "Left %7d : Right %7d",
                     scorpion.driveTrain.lDrive.getCurrentPosition(),
                     scorpion.driveTrain.rDrive.getCurrentPosition());
-                telemetry.addData("Pivot",  "Pivot1 %7d : Pivot2 %7d",
-                    scorpion.intakePivot.pivot1.getCurrentPosition(),
-                    scorpion.intakePivot.pivot2.getCurrentPosition());
-                telemetry.addData("PivotExtend",  "%7d",
-                    scorpion.intakePivot.extend.getCurrentPosition());
-                telemetry.addData("Lift",  "%7d",
-                    scorpion.liftStinger.lift.getCurrentPosition());
-                    // Show the elapsed game time and wheel power.
-                    //telemetry.addData("Status", "Run Time: " + runtime.toString());
                     telemetry.update();
         }
 
